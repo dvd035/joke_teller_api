@@ -59,7 +59,7 @@ app.post('/joke', function(req, res){
     console.log(req.body); //kya kya hai dekhne ke liye
     console.log(jokes.length); //
     jokes.push(req.body);
-    res.send('thanks for contribution')
+    res.send('thanks for contribution');
     console.log(jokes.length);
     
 })
