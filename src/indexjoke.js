@@ -57,8 +57,8 @@ app.get('/random', function(req, res){
 
 app.post('/joke', function(req, res){
     console.log(req.body); //kya kya hai dekhne ke liye
-    console.log(jokes.length); //
-    jokes.push(req.body);
+    console.log(jokes.length); // phle ka length
+    jokes.push(req.body); // server se yha push kia
     res.send('thanks for contribution');
     console.log(jokes.length);
     

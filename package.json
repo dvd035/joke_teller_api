@@ -6,12 +6,19 @@
   "scripts": {
     "start": "nodemon src/index.js",
     "startjokeapi": "nodemon src/indexjoke.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "testchai": "chai",
+    "testcov": "nyc mocha"
   },
   "author": "prashant",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
     "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0"
   }
 }
