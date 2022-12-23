@@ -8,7 +8,8 @@
     "startjokeapi": "nodemon src/indexjoke.js",
     "test": "mocha",
     "testchai": "chai",
-    "testcov": "nyc mocha"
+    "testcov": "nyc --reporter=html --reporter=text mocha"
+
   },
   "author": "prashant",
   "license": "ISC",
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
     "mocha": "^10.2.0",
     "nyc": "^15.1.0"
   }

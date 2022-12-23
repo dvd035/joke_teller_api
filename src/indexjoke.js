@@ -64,6 +64,6 @@ app.post('/joke', function(req, res){
     
 })
 
-app.listen(5005, function(){
+module.exports = app.listen(5005, function(){
     console.log('port 5005 is active');
 })
