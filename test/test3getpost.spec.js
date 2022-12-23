@@ -18,4 +18,13 @@ describe('get post api testing', function(){
             done();
         })
     })
+
+    it('get method test2', function(done){
+        chai.request(server)
+        .get('/random')
+        .end((error,response)=>{
+            response.body.joke.should.be.a('string')
+            done();
+        })
+    })
 })
