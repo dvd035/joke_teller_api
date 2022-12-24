@@ -9,11 +9,11 @@
     "test": "mocha",
     "testchai": "chai",
     "testcov": "nyc --reporter=html --reporter=text mocha"
-
   },
   "author": "prashant",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "nodemon": "^2.0.20"
   },

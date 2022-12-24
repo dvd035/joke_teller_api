@@ -1,6 +1,11 @@
-const express = require('express')
-const app = express()
-app.use(express.json()); // extract json data from req
+const cors = require('cors') //importing cross origin resource sharing middleware
+const express = require('express')//importing express
+
+
+const app = express() // init express
+app.use(express.json()); // extract json data from req using express.json middle ware
+app.use(cors())
+
 
 const jokes= [
         {
@@ -47,8 +52,15 @@ const jokes= [
             "category": "Programming",
             "joke": "Why is Linux safe? Hackers peak through Windows only.",
             "id": 260
-        }
+        },
+        {
+            "category": "Programming",
+            "joke": "Programming is 10% science, 20% ingenuity, and 70% getting the ingenuity to work with the science.",
+            "id": 168
+        },
 ]
+
+//defining end points
 app.get('/random', function(req, res){
     const ind=Math.floor(Math.random()*10)
     console.log('send joke of index nmbr', ind)
@@ -56,14 +68,14 @@ app.get('/random', function(req, res){
 })
 
 app.post('/joke', function(req, res){
-    console.log(req.body); //kya kya hai dekhne ke liye
+    //console.log(req.body); //kya kya hai dekhne ke liye
     console.log(jokes.length); // phle ka length
     jokes.push(req.body); // server se yha push kia
     res.send('thanks for contribution');
-    console.log(jokes.length);
+    console.log(jokes.length); // bad ka length
     
 })
 
-module.exports = app.listen(5005, function(){
-    console.log('port 5005 is active');
+module.exports = app.listen(4000, function(){
+    console.log('port 4000 is active');
 })
