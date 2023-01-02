@@ -4,7 +4,7 @@ const express = require('express')//importing express
 
 const app = express() // init express
 app.use(express.json()); // extract json data from req using express.json middle ware
-app.use(cors())
+app.use(cors())//middle ware
 const PORT = process.env.PORT || 3030;
 
 const jokes= [
@@ -76,6 +76,6 @@ app.post('/joke', function(req, res){
     
 })
 
-module.exports = app.listen(PORT, function(){
+module.exports = app.listen(PORT, function(){//start server and listen on that port
     console.log(`port ${PORT} is active`);
 })
