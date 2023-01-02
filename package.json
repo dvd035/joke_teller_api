@@ -9,7 +9,7 @@
     "test": "mocha",
     "testchai": "chai",
     "testcov": "nyc --reporter=html --reporter=text mocha",
-    "test-start":"mocha && nyc --reporter=html --reporter=text mocha && nodemon src/indexjoke.js"
+    "test-start":"npm run test && npm run testcov && npm run startjokeapi"
   },
   "author": "prashant",
   "license": "ISC",
