@@ -8,7 +8,8 @@
     "startjokeapi": "nodemon src/indexjoke.js",
     "test": "mocha",
     "testchai": "chai",
-    "testcov": "nyc --reporter=html --reporter=text mocha"
+    "testcov": "nyc --reporter=html --reporter=text mocha",
+    "test-start":"mocha && nyc --reporter=html --reporter=text mocha && nodemon src/indexjoke.js"
   },
   "author": "prashant",
   "license": "ISC",
